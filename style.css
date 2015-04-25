@@ -1,0 +1,68 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.3em;
+	line-height: 2em;
+}
+
+.content {
+	max-width: 800px;
+	margin-top: 0px;
+}
+
+.header {
+	text-align: center;
+	padding-bottom: 0.5em;
+	border-bottom: #555 solid 1px;
+	margin-bottom: 1em;
+}
+
+h1 {
+	color: #399CD3;
+	line-height: 1.6em;
+}
+
+.notes {
+	margin-top: 2.5em;
+	border-top: #555 solid 1px;
+	padding-top: 2em;
+	font-size: .5em;
+	line-height: 1.5em;
+	color: #555;
+}
+
+p#input {
+	text-align: center;
+}
+
+input {
+	text-align: center;
+	font-size: 1.5em;
+	padding: 0.5em;
+	width: 8em;
+	color: #399CD3;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.code {
+	font-family: courier;
+	font-size: 0.7em;
+	line-height: 1em;
+	color: #399CD3;
+	margin: 1em 0em;
+	background: #eee;
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 1.6em;
+		line-height: 1.8em;
+	}
+
+	.content {
+		margin-top: 0px;
+	}
+}
