@@ -48,11 +48,8 @@ a, a:hover {
 }
 
 .code {
-	font-family: courier;
 	font-size: 0.7em;
-	line-height: 1em;
 	color: #399CD3;
-	margin: 1em 0em;
 	background: #eee;
 }
 

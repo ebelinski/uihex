@@ -15,6 +15,8 @@ $(document).ready(function() {
 				newValue = rawValue;
 			}
 
+			newValue = newValue.toLowerCase();
+
 			if (newValue.length == 3) {
 				newValue = newValue[0]+newValue[0]+newValue[1]+newValue[1]+newValue[2]+newValue[2];
 			}
@@ -27,8 +29,8 @@ $(document).ready(function() {
 				$("#swift-results").html("");
 				$("#objective-c-results").html("");
 			} else {
-				$("#swift-results").html("UIColor(red: "+red+", green: "+grn+", blue: "+blu+", alpha: 1) /* #"+newValue+" */");
-				$("#objective-c-results").html("[UIColor colorWithRed:"+red+" green:"+grn+" blue:"+blu+" alpha:1]; /* #"+newValue+" */");
+				$("#swift-results").html("<pre class='code'>UIColor(red: "+red+", green: "+grn+", blue: "+blu+", alpha: 1) /* #"+newValue+" */</pre>");
+				$("#objective-c-results").html("<pre class='code'>[UIColor colorWithRed:"+red+" green:"+grn+" blue:"+blu+" alpha:1]; /* #"+newValue+" */</pre>");
 			}
 		} else {
 			$("#swift-results").html("");
