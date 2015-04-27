@@ -30,7 +30,7 @@ h1 {
 	color: #555;
 }
 
-p#input {
+div#input {
 	text-align: center;
 }
 
@@ -63,6 +63,16 @@ a, a:hover {
 
 span.credit {
 	opacity: 0.3;
+}
+
+.color-preview {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	border: 1px solid white;
+	margin: -0.5em 0.5em;
+} .color-preview.active {
 }
 
 @media screen and (max-width: 767px) {

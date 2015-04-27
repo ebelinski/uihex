@@ -52,16 +52,25 @@ function processValue() {
 		var blu = getColorValue(newValue[4]+newValue[5]);
 
 		if (isNaN(red) || isNaN(grn) || isNaN(blu)) {
-			$("#swift-results").html("");
-			$("#objective-c-results").html("");
+			clearResults();
 		} else {
 			$("#swift-results").html("<pre class='code'>UIColor(red: "+red+", green: "+grn+", blue: "+blu+", alpha: 1) /* #"+newValue+" */</pre>");
 			$("#objective-c-results").html("<pre class='code'>[UIColor colorWithRed:"+red+" green:"+grn+" blue:"+blu+" alpha:1]; /* #"+newValue+" */</pre>");
+
+			$(".color-preview.active").css("border-color", "black");
+			$(".color-preview.active").css("background-color", "#"+newValue);
 		}
 	} else {
-		$("#swift-results").html("");
-		$("#objective-c-results").html("");
+		clearResults();
 	}
+}
+
+function clearResults() {
+	$("#swift-results").html("");
+	$("#objective-c-results").html("");
+
+	$(".color-preview.active").css("border-color", "white");
+	$(".color-preview.active").css("background-color", "white");
 }
 
 function getColorValue(hex) {
