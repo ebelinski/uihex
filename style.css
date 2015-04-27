@@ -53,6 +53,14 @@ a, a:hover {
 	background: #eee;
 }
 
+#tips {
+	display: none;
+	padding: 10px;
+} #tips ul {
+	margin: 0em !important;
+	list-style-type: square;
+}
+
 @media screen and (max-width: 767px) {
 	body {
 		font-size: 1.6em;

@@ -11,6 +11,10 @@ $(document).ready(function() {
 	$("#hex-value").keyup(function() {
 		processValue();
 	});
+
+	$("#toggle-tips").click(function () {
+		$("#tips").toggle();
+	});
 });
 
 $(window).on('hashchange', function() {
