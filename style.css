@@ -61,6 +61,10 @@ a, a:hover {
 	list-style-type: square;
 }
 
+span.credit {
+	opacity: 0.3;
+}
+
 @media screen and (max-width: 767px) {
 	body {
 		font-size: 1.6em;
