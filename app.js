@@ -12,11 +12,13 @@ $(document).ready(function() {
 		processValue();
 	});
 
+	// Show/hide tips when user clicks on link to show tips
 	$("#toggle-tips").click(function () {
 		$("#tips").toggle();
 	});
 });
 
+// Runs when user changes the hash of the url and hits enter
 $(window).on('hashchange', function() {
 	processHash();
 });
@@ -30,7 +32,6 @@ function processHash() {
 function processValue() {
 	var rawValue = $("#hex-value").val();
 	var newValue = "";
-	// console.log("Value: " + rawValue);
 	
 	if (((rawValue.length == 7 || rawValue.length == 4) && rawValue[0] == '#') || ((rawValue.length == 6 || rawValue.length == 3) && rawValue[0] != '#')) {
 		if (rawValue[0] == '#') {
