@@ -1,18 +1,27 @@
 $(document).ready(function() {
+	// On page load, check if URL has a hash
 	if(window.location.hash) {
-		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-		$("#hex-value").val("#"+hash);
-		processValue();
+		processHash();
 	}
 
-	$("#hex-value").focus();
+	// On page load, focus on hex value input
+	$("input#hex-value").focus();
 
+	// On hex value input change, process its value
 	$("#hex-value").keyup(function() {
 		processValue();
 	});
-
-
 });
+
+$(window).on('hashchange', function() {
+	processHash();
+});
+
+function processHash() {
+	var hash = window.location.hash.substring(1);
+	$("#hex-value").val("#"+hash);
+	processValue();
+}
 
 function processValue() {
 	var rawValue = $("#hex-value").val();
