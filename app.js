@@ -2,7 +2,12 @@ $(document).ready(function() {
 	$("#hex-value").focus();
 
 	$("#hex-value").keyup(function() {
-		var rawValue = $("#hex-value").val();
+		processValue();
+	});
+});
+
+function processValue() {
+	var rawValue = $("#hex-value").val();
 		var newValue = "";
 		// console.log("Value: " + rawValue);
 		
@@ -36,8 +41,7 @@ $(document).ready(function() {
 			$("#swift-results").html("");
 			$("#objective-c-results").html("");
 		}
-	});
-});
+}
 
 function getColorValue(hex) {
 	newValue = parseInt(hex, 16);
