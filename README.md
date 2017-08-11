@@ -7,4 +7,4 @@ UIHex: Hex-UIColor Converter
 
 Clone this repository and open index.html in a browser.
 
-A working version of this can be found online [here](http://ebelinski.com/uihex).
+A working version of this can be found online at http://uihex.com/.
