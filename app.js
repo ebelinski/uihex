@@ -32,7 +32,7 @@ function processHash() {
 function processValue() {
 	var rawValue = $("#hex-value").val();
 	var newValue = "";
-	
+
 	if (((rawValue.length == 7 || rawValue.length == 4) && rawValue[0] == '#') || ((rawValue.length == 6 || rawValue.length == 3) && rawValue[0] != '#')) {
 		if (rawValue[0] == '#') {
 			// console.log("7/4 and #");
@@ -55,8 +55,8 @@ function processValue() {
 		if (isNaN(red) || isNaN(grn) || isNaN(blu)) {
 			clearResults();
 		} else {
-			$("#swift-results").html("<h2>Swift</h2><pre class='code'>UIColor(red: "+red+", green: "+grn+", blue: "+blu+", alpha: 1) /* #"+newValue+" */</pre>");
-			$("#objective-c-results").html("<h2>Objective-C</h2><pre class='code'>[UIColor colorWithRed:"+red+" green:"+grn+" blue:"+blu+" alpha:1]; /* #"+newValue+" */</pre>");
+			$("#swift-results").html("<h2>Swift</h2><pre class='code'>UIColor(red: "+red+", green: "+grn+", blue: "+blu+", alpha: 1) // #"+newValue+"</pre>");
+			$("#objective-c-results").html("<h2>Objective-C</h2><pre class='code'>[UIColor colorWithRed:"+red+" green:"+grn+" blue:"+blu+" alpha:1]; // #"+newValue+"</pre>");
 
 			$(".color-preview.active").css("border-color", "black");
 			$(".color-preview.active").css("background-color", "#"+newValue);
